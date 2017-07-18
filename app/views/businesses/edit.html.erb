@@ -1,0 +1,12 @@
+<%= simple_form_for @business do |f| %>
+	<%= f.input :name %>
+	<%= f.input :logo %>
+	<%= f.input :description %>
+	<%= f.input :university %>
+	<%= f.input :location %>
+	<%= f.input :video %>
+	<%= f.button :submit %>
+
+
+<% end %>
+<%= link_to "Edit", edit_business_path(@business) %>
