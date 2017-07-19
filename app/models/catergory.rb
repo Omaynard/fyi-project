@@ -1,4 +1,4 @@
 class Catergory < ApplicationRecord
-	belongs_to :businesses
-	
+	has_many :businesses
+  
 end

@@ -1,4 +1,6 @@
 <%= simple_form_for @business do |f| %>
+	<%= f.select :catergory_id, @catergories %>
+	
 	<%= f.input :name %>
 	<%= f.input :logo %>
 	<%= f.input :description %>

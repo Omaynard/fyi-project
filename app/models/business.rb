@@ -1,6 +1,6 @@
 class Business < ApplicationRecord
 	belongs_to :user
 	has_many :likes
-	has_many :catergories
-	
+	belongs_to :catergory
+
 end

@@ -1,4 +1,5 @@
 <%= simple_form_for @business do |f| %>
+	<%= select_tag(:catergory_id, options_for_select(@catergories), :prompt => "Select a catergory") %>
 	<%= f.input :name %>
 	<%= f.input :logo %>
 	<%= f.input :description %>
