@@ -11,20 +11,23 @@ user1 = User.create!({
 	password: "password",
 	encrypted_password: "password"
 	})
-catergory1 = Catergory.create!({
-	name: "Fashion"
-	
-
+category1 = Category.create!({
+	name: "Fashionsss"
+	})
+category2 = Category.create!({
+	name: "kadsdkasj"
 	})
 
 business1 = Business.create!({
 	user_id: user1.id,
-	catergory_id: catergory1.id,
+	category_id: category1.id,
 	name: "DD",
 	logo: "fsef",
 	description:"kadff"
 
 	})
+
+
 
 likes1 = Like.create!({
 	rating: 3,
