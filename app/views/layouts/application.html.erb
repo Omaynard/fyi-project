@@ -10,12 +10,12 @@
 
 
   <body>
-  <nav class=" navbar navbar-default">
+  <nav class=" navbar navbar-light bg-inverse">
 
 	  <div class ="container">
 
 		  <div class="navbar-brand">
-		  
+
 			  <%= link_to "FYI", root_path, class: "navbar-brand" %>
 			</div>
 			  <ul class ="nav navar-nav">
@@ -25,6 +25,7 @@
 			  <% else %>
 			  <li><%= link_to "Log in ", new_user_session_path %></li>
 			  <% end %>
+
 			  </ul>
 	  </div> 
   </nav>

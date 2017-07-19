@@ -1,4 +1,4 @@
 class Like < ApplicationRecord
-	belongs_to :users
-	belongs_to :businesses
+	belongs_to :user
+	belongs_to :business
 end
