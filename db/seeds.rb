@@ -22,7 +22,7 @@ business1 = Business.create!({
 	user_id: user1.id,
 	category_id: category1.id,
 	name: "DD",
-	logo: "fsef",
+	logo: File.new("../../adfkjsdfh"),
 	description:"kadff"
 
 	})

@@ -12,6 +12,7 @@ gem 'carrierwave', '0.10.0'
 gem "mini_magick"
 gem "fog"
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 # Use postgresql as the database for Active Record

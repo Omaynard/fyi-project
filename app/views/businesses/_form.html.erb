@@ -1,12 +1,11 @@
 <%= simple_form_for @business,:html => { :multipart => true } do |f| %>
 	<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a catergory") %>
 	<%= f.input :name %>
-	<%= f.input :logo %>
+	
 	<%= f.input :description %>
 	<%= f.input :university %>
 	<%= f.input :location %>
 	<%= f.input :video %>
-	<%= f.label :logo %>
     <%= f.file_field :logo %>
 	<%= f.button :submit %>
 	

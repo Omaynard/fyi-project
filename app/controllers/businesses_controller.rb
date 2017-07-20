@@ -43,6 +43,10 @@ class BusinessesController < ApplicationController
 	end
 
 	private 
+    def set_upload
+      @Business = Business.find(params[:id])
+    end
+ 
 	def business_params
 		params.require(:business).permit(:name, :logo, :description, :university, :location, :video, :category_id)
 	end
