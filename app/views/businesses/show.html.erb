@@ -13,8 +13,17 @@
 	<%= link_to "Back", root_path %>
 </div>
 <div class = "row">
+
 	<div class= " col-md-4">
 		<h1>ratings</h1>
 	</div>
 </div>
+
+<% if has_user_liked(@likes) %>
+	<button>unline</button>
+	
+<% elsif %>
+
+	<button>like</button>
+<% end %>
 

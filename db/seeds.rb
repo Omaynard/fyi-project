@@ -35,3 +35,4 @@ likes1 = Like.create!({
 	user_id: user1.id,
 	business_id: business1.id
 	})
+

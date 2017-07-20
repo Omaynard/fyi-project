@@ -9,6 +9,7 @@ class BusinessesController < ApplicationController
 	end 
 	def show
 		@business = Business.find(params[:id])
+		@likes = @business.likes
 	end
 	def edit
 		@business = Business.find(params[:id])
