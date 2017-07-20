@@ -4,4 +4,6 @@ class Business < ApplicationRecord
 	has_many :likes
 	
 
+   mount_uploader :logo, ImageUploader
+
 end

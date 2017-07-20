@@ -1,4 +1,5 @@
 class BusinessesController < ApplicationController
+	before_action :set_upload, only: [:show, :edit, :update, :destroy]
 	def index 
 		if params[:category].blank?
 			@businesses = Business.all
