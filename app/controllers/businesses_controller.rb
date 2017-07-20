@@ -1,6 +1,11 @@
 class BusinessesController < ApplicationController
 	def index 
-		@businesses = Business.all
+		if params[:category].blank?
+			@businesses = Business.all
+		else
+			@category_id = Category.find_by(name: params[:category]).id
+			@businesses = Business.where(:category_id => @category_id)
+		end
 	end 
 	def show
 		@business = Business.find(params[:id])

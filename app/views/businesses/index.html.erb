@@ -1,7 +1,13 @@
-<h1> index</h1>
+<h1> Businesses </h1>
 
 <% @businesses.each do |business| %>
-<%= link_to business.name, business_path(business)%>
+	
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<h1><%= link_to business.name, business_path(business)%></h1>
+			</div>
+		</div>
+	
 <% end %>
 
 <%= link_to "Add business", new_business_path %>

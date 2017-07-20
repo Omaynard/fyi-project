@@ -1,4 +1,4 @@
-<%= simple_form_for @business do |f| %>
+<%= simple_form_for @business,:html => { :multipart => true } do |f| %>
 	<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a catergory") %>
 	<%= f.input :name %>
 	<%= f.input :logo %>
