@@ -1,9 +1,17 @@
 <h1>Editing Like</h1>
 
 <%= simple_form_for([@business, @like]) do |f| %>
-<%= f.input :rating %>
+<div id="rating-form">
+  <label>rating</label>
+  </div>
 <%= f.input :comment %> 
 <%= f.button :submit %>
 
 <% end %>
+<script>
+$('#rating-form').raty({
+	path: '/assets/',
+	scoreName: 'like[rating]'
+});
+</script>
 
