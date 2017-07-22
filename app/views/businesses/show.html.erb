@@ -5,6 +5,9 @@
 	<div class= "col-md-8">
 		<h1><%= @business.name %></h1>
 		<p>Category: <%= @business.category.name %></p>
+		<h2>Average rating </h2>
+		<div class='average-like-rating' data-score=<%= @average_like %>></div>
+		<span> Based on <%= @business.likes.count %> Feedbacks </span>
 		<h1> Business Description </h1>
 		<p><%= @business.description %></p>
 	</div>
@@ -36,6 +39,18 @@ $('.like-rating').raty({
 	path: '/assets/'
 });
 </script>
+
+<script>
+$('.average-like-rating').raty({
+	readOnly: true,
+	path: '/assets/',
+	score: function(){
+		return $(this).attr('data-score')
+	}
+	
+});
+</script>
+
 
 
 

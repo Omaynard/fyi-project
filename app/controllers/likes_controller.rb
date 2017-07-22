@@ -1,6 +1,7 @@
 class LikesController < ApplicationController
 	before_action :find_business
 	before_action :find_like, only: [:edit, :update, :destroy]
+	before_action :authenticate_user!, only: [:new, :edit]
 
   
   
