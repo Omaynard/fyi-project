@@ -1,0 +1,15 @@
+<p><%= like.rating %></p>
+<p><%= like.comment %></p>
+
+<% if user_signed_in? %>
+
+<% if like.user_id == current_user.id %>
+
+<%= link_to "Edit", edit_business_like_path(like.business, like) %>
+<%= link_to "Delete", business_like_path(like.business, like), method: :delete, data: {
+	confirm: "Are you sure ?" } %>
+
+<% end %>
+<% end %>
+
+

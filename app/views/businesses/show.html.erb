@@ -8,15 +8,22 @@
 		<h1> Business Description </h1>
 		<p><%= @business.description %></p>
 	</div>
+
 	<%= link_to "Edit", edit_business_path(@business) %>
 	<%= link_to 'Destroy', @business, method: :delete %>
 	<%= link_to "Back", root_path %>
-</div>
+	</div>
+
 <div class = "row">
+
 	<img src ="<%= @business.logo.medium %>">
 
 
 	<div class= " col-md-4">
+	<%= render @business.likes %>
+	<div>
+	<%= link_to "Leave feeback", new_business_like_path(@business) %>
+	</div>
 		<h1>ratings</h1>
 	</div>
 </div>
