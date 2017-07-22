@@ -27,6 +27,15 @@
 		<h1>ratings</h1>
 	</div>
 </div>
+<script>
+$('.like-rating').raty({
+	readOnly: true,
+	score: function(){
+		return $(this).attr('data-score');
+	},
+	path: '/assets/'
+});
+</script>
 
 
 
