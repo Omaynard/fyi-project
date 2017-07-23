@@ -24,24 +24,30 @@
 	</div>
 
 	
-	</div>
+</div>
 
 <div class = "row">
-
+	<% if @business.video.blank? %>
+		<iframe src ="<%= @business.video %>"> </iframe>
+	<% else %>
 	<img src ="<%= @business.logo.medium %>">
+	<% end %>
 
 
-	<div class= "col-md-4">
+</div>
+
+
+<div class= "row">
 	
 	<h1>Feedback</h1>
 	<%= render @business.likes %>
 	<div>
-	<%= link_to "Leave feedback", new_business_like_path(@business) %>
+		<%= link_to "Leave feedback", new_business_like_path(@business) %>
 	
 		
 	</div>
-	</div>
 </div>
+
 <script>
 	$('.like-rating').raty({
 		readOnly: true,
