@@ -1,5 +1,5 @@
 <div class = "row">
-	<div class = "col-md-4">
+	
 		<img src ="<%= @business.logo.medium %>">
 		<% if user_signed_in? %>
 			<% if @business.user_id == current_user.id %>
@@ -8,8 +8,8 @@
 			<% end %>
 		<% end %>
 		<%= link_to "Back", root_path %>
-	</div>
-	<div class= "col-md-8">
+	
+	<div class= "row">
 		<h1><%= @business.name %></h1>
 		<p>Category: <%= @business.category.name %></p>
 		<h2>Average rating </h2>
@@ -32,7 +32,7 @@
 	<h1>Feedback</h1>
 	<%= render @business.likes %>
 	<div>
-	<%= link_to "Leave feeback", new_business_like_path(@business) %>
+	<%= link_to "Leave feedback", new_business_like_path(@business) %>
 	
 		
 	</div>

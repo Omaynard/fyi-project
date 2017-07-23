@@ -2,14 +2,15 @@
 
 <% @businesses.each do |business| %>
 	
-		<div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-			<img src ="<%= business.logo.medium %>">
+		<div class="row">
+			<div class="col-sm-3">
+			<img src ="<%= business.logo.thumb %>">
 				<h3 class = 'business-heading'><%= link_to business.name, business_path(business)%></h3>
 				
 
 			</div>
+			<% end %>
 		</div>
 	
-<% end %>
+
 

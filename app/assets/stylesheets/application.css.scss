@@ -15,9 +15,7 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-body{
-	background-color: #d0d0d0;
-}
+
 
 .navbar{
 
@@ -45,7 +43,7 @@ body{
 	box-shadow: 3px 3px 3px 3px #ccc;
 
 }
-.col-md-4{
+.col-sm-3{
 	box-shadow: 3px 3px 3px 3px #ccc;
 }
 .col-md-8{
@@ -54,4 +52,24 @@ box-shadow: 3px 3px 3px 3px #ccc;
 }
 .navbar a {
 	color:white !important;
+}
+.col-sm-3 img{
+	display: block;
+    margin: 0 auto;
+}
+.red-cat a{
+	color:red !important;
+}
+.row img{
+	display: block;
+    margin: 0 auto;
+}
+.average-like-rating img{
+	display: inline-block;
+}
+.like-rating img{
+	display: inline-block;
+}
+.row {
+	margin-left: 0px;
 }
