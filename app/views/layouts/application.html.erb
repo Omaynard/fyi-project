@@ -11,15 +11,24 @@
 
 
   <body>
+  <div class="container-fluid">
+   <div class="row">
+   <div class = "logo">
+	<img src="/assets/fyi_final_logo.png" class="rounded mx-auto d-block" width="150" height="150" alt="">
+	</div>
+   </div>
+</div>
   <nav class=" navbar navbar-default">
 
 	  <div class ="container">
 
-		<div class="navbar-brand">
+		 <a class="navbar-brand" href="#">
+    		<img src="/assets/fyi_final_logo.png" width="30" height="30" alt="">
+ 		</a>
 
-			<%= link_to "FYI", root_path, class: "navbar-brand" %>
-		</div>
+		
 		<ul class ="nav navbar-nav">
+			<li class = "white"><%= link_to "FYI", root_path %></li>
 			<li><%= link_to "Sign Up", new_user_registration_path %></li>
 			<% if user_signed_in? %>
 			  <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>

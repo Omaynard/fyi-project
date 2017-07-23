@@ -1,4 +1,5 @@
 <%= simple_form_for([@business, @business.likes.build]) do |f| %>
+
   <div id="rating-form">
   <label>rating</label>
   </div>
@@ -6,6 +7,7 @@
   <%= f.input :comment %>
   <%= f.button :submit %>
 <% end %>
+
 
 <script>
 $('#rating-form').raty({

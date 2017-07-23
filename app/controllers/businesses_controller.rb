@@ -25,10 +25,13 @@ class BusinessesController < ApplicationController
 		@categories = Category.all.map{ |c| [c.name, c.id] }
 	end
 	def update
-		@business = Business.find(params[:id])
+		
 		@business.category_id = params[:category_id]
-        @business.update(business_params)
-        redirect_to @business
+		if @business.update(business_params)
+			redirect_to business_path(@business)
+		else
+        	render 'edit'
+        end
     end
 
 	def new 

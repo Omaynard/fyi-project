@@ -1,11 +1,12 @@
-<h1> Businesses </h1>
+<h1 class = 'index-header'> Businesses </h1>
 
 <% @businesses.each do |business| %>
 	
 		<div class="col-sm-6 col-md-4">
 			<div class="thumbnail">
-				<h1><%= link_to business.name, business_path(business)%></h1>
-				<img src ="<%= business.logo.thumb %>">
+			<img src ="<%= business.logo.medium %>">
+				<h3 class = 'business-heading'><%= link_to business.name, business_path(business)%></h3>
+				
 
 			</div>
 		</div>

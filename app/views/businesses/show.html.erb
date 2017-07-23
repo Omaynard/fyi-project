@@ -1,6 +1,13 @@
 <div class = "row">
 	<div class = "col-md-4">
-		<h1> Image </h1>
+		<img src ="<%= @business.logo.medium %>">
+		<% if user_signed_in? %>
+			<% if @business.user_id == current_user.id %>
+				<%= link_to "Edit", edit_business_path(@business) %>
+				<%= link_to 'Delete', @business, method: :delete %>
+			<% end %>
+		<% end %>
+		<%= link_to "Back", root_path %>
 	</div>
 	<div class= "col-md-8">
 		<h1><%= @business.name %></h1>
@@ -12,9 +19,7 @@
 		<p><%= @business.description %></p>
 	</div>
 
-	<%= link_to "Edit", edit_business_path(@business) %>
-	<%= link_to 'Destroy', @business, method: :delete %>
-	<%= link_to "Back", root_path %>
+	
 	</div>
 
 <div class = "row">
@@ -22,33 +27,36 @@
 	<img src ="<%= @business.logo.medium %>">
 
 
-	<div class= " col-md-4">
+	<div class= "col-md-4">
+	
+	<h1>Feedback</h1>
 	<%= render @business.likes %>
 	<div>
 	<%= link_to "Leave feeback", new_business_like_path(@business) %>
+	
+		
 	</div>
-		<h1>ratings</h1>
 	</div>
 </div>
 <script>
-$('.like-rating').raty({
-	readOnly: true,
-	score: function(){
-		return $(this).attr('data-score');
-	},
-	path: '/assets/'
-});
+	$('.like-rating').raty({
+		readOnly: true,
+		score: function(){
+			return $(this).attr('data-score');
+		},
+		path: '/assets/'
+	});
 </script>
 
 <script>
-$('.average-like-rating').raty({
-	readOnly: true,
-	path: '/assets/',
-	score: function(){
-		return $(this).attr('data-score')
-	}
-	
-});
+	$('.average-like-rating').raty({
+		readOnly: true,
+		path: '/assets/',
+		score: function(){
+			return $(this).attr('data-score')
+		}
+		
+	});
 </script>
 
 
